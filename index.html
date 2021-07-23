@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Fascinate&family=Oi&family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <title>Mon premier site web</title>
+    <meta name="description" content="Ceci est mon premier site créé lors de ma formation.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <div>
+            <!-- Balise vide, l'image sera ajoutée via le CSS -->
+        </div>
+        <nav class="navigation">
+            <ul class="nav-liste">
+                <li class="nav-categorie"><a href="index.html">Home</a></li>
+                <li class="nav-categorie"><a href="javascript.html">Javascript</a>
+                    <ul class="nav-sous-menu">
+                        <li><a href="exercices.html">Exercices</a></li>
+                        <li><a href="defis.html">Défis</a></li>
+                        <li><a href="bonus.html">Bonus</a></li>
+                    </ul>
+                </li>
+                <li class="nav-categorie"><a href="https://www.interface3namur.be" target="_blank">Interface3.Namur</a>
+                    <ul class="nav-sous-menu">
+                        <li><a href="https://www.interface3namur.be/asbl/" target="_blank">A propos</a></li>
+                        <li><a href="https://www.interface3namur.be/formation/" target="_blank">Formations</a></li>
+                        <li><a href="https://www.interface3namur.be/orientation/fiches-metiers/" target="_blank">Fiches métiers</a></li>
+                        <li><a href="https://www.interface3namur.be/contact/" target="_blank">Contact</a></li>
+                    </ul>
+                </li>
+            </ul> 
+        </nav>
+    </header>
+
+    <main>
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ul>
+                <li><span aria-current="page"><a href="index.html">Home</a></span></li>
+            </ul>
+        </nav>
+        <h1>Mon premier site en HTML/CSS</h1>
+        <h2>Attention, ce site n'est pas MOBILEFIRST</h2>
+        <section>
+            <article>
+                <h3 id="titreh3_en_majuscule" class="souligne">Mes petits bb chatons</h3>
+                <p><span class="lettrine">M</span>on Poupou d'amour.</p>
+
+                <p><span class="lettrine">M</span>a Xounouille d'amour.</p>
+
+                <p><span class="lettrine">M</span>a petite Démonia d'amour.</p>
+            </article>
+
+            <article>
+                <h3>Mes photos</h3>
+
+                <p>Voici les photos de mon dernier voyage.</p>
+
+                    <div id="gallery" class="flexing">
+                        <figure>
+                            <img src="img/landscape-01.jpg" alt="Paysage, arbre et escalier">
+                            <figcaption>Paysage, arbre et escalier</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img src="img/landscape-02.jpg" alt="Paysage, désert, montagne">
+                            <figcaption>Paysage, désert, montagne</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img src="img/landscape-03.jpg" alt="Paysage, lac, montagne">
+                            <figcaption>Paysage, lac, montagne</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img src="img/landscape-04.jpg" alt="Paysage, mer, couché de soleil">
+                            <figcaption>Paysage, mer, couché de soleil</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img src="img/landscape-05.jpg" alt="Paysage, route, montagne">
+                            <figcaption>Paysage, route, montagne</figcaption>
+                        </figure>
+                    </div>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+            <h3 class="souligne majuscule">Informations</h3>
+            <p>Site web pour <br>"<strong>Découverte des métiers informatiques</strong>"</p>
+            <p><strong>Déborah Clerckx</strong> &copy;2021</p>
+    </footer>
+
+</body>
+</html>

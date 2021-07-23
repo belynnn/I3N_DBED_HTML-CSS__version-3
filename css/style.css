@@ -1,0 +1,380 @@
+/* BODY - Mise en forme générale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(36, 36, 36);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em; /* em s'adapte à tout les écrans et paramètres utilisateurs */
+    line-height: 1.25; /* interligne */
+}
+img {
+    width: 100%;
+    height: auto;
+    border: 3px solid grey;
+    border-radius: 47% 49% 64% 30% / 73% 32% 59% 18%;
+}
+main p{
+    color: #c2c2c2;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+/* exemple ID 
+#titreh3_en_majuscule {
+    text-transform: uppercase;
+}*/
+
+/* exemple CLASS */
+.souligne {
+    text-decoration: underline;
+}
+.majuscule {
+    text-transform: uppercase;
+}
+.lettrine {
+    font-size: 2.6em;
+    font-weight: 700;
+}
+/* BODY */
+
+
+
+/**     Mise en place de la navigation   **/
+header {
+    color: white;
+    background-color: rgb(0, 94, 122);
+}
+
+header div {
+    height: 25vh;
+    background-image: url("../img/banner-01.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    background-position: center;
+}
+
+nav { /* état classique d'une div nav */
+    display: flex;
+    justify-content: center;
+}
+.navigation { /* class navigation d'une div nav */
+    color: rgb(234, 230, 240);
+}
+.navigation .nav-categorie { /* nav > ul : état classique des menus de navigation */
+    list-style: none;
+    display: inline-block;
+    position: relative; /*et hop le menu déroulant fonctionne^^'*/
+    padding: 10px 10px;
+}
+.navigation .nav-categorie:hover { /* nav > ul:hover :  état survolé des menus de navigation */
+    border-bottom: 5px solid rgb(234, 230, 240);
+    background-color: RGBa(165, 32, 54, 0.15);
+    padding: 10px 10px 5px 10px;
+}
+.navigation .nav-categorie a { /* nav > ul > a : état classique des liens des menus de navigation */
+    font-size: 1.4em;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(234, 230, 240);
+    background-color: rgba(166,167,220,0);
+}
+.navigation .nav-categorie a:hover { /* nav > ul > a:hover : état survolé des liens des menus de navigation */
+    color: rgb(234, 230, 240);
+    transition: 0.5s;
+}
+.navigation .nav-categorie .nav-sous-menu { /* nav > ul > li > ul : état classique des sous-menus de navigation */
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 5px;
+    position: absolute;
+    font-size: 0.8em ;
+
+    z-index: 1000;
+    max-height:0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    -moz-transition: .3s all;
+    -webkit-transition: .3s all;
+    transition: .3s all;
+}
+.navigation .nav-categorie .nav-sous-menu a {/* nav > ul > li > a  : état classique des liens des sous-menus de navigation*/
+    font-size: 1.2em;
+    color: rgb(234, 230, 240);
+}
+.navigation .nav-categorie .nav-sous-menu a:hover{ /* nav > ul > li >a:hover : état survolé des liens des sous-menus */
+    font-weight: 700;
+    background-color: rgb(234, 230, 240);
+    color: rgb(22, 51, 59);
+    padding-right: 15%;
+    padding-left: 15%;
+}
+.navigation .nav-categorie:hover .nav-sous-menu { /* état survolé du menu de navigation pour faire apparaître le sous-menu de navigation */
+    display: block;
+    max-height: 15em;
+    background-color: rgb(22, 51, 59);
+    padding: 5px;
+}
+
+/* Mise en place du main */
+main {
+    padding: 24px 18px;
+    background-color: rgb(61, 61, 61);
+    max-width: 1024px;
+    margin: 0 auto;
+}
+main h1{
+    color: rgb(234, 230, 240);
+    font-family: 'Fascinate', cursive;
+    margin-bottom: 18px;
+    font-size: 2.6em;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px dashed rgb(42, 136, 165);
+    padding-bottom: 24px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}   
+main h2 {
+    font-size: 1.6em;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 300;
+    color: rgb(234, 230, 240);
+    margin-bottom: 18px;
+    background-color: rgb(0, 94, 122);
+    padding: 7px;
+    text-align: center;
+    text-transform: uppercase;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+}   
+main .js-page{
+    width: 50%;
+    margin-left: 25%;
+    font-size: 1.6em;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 18px;
+    background-color: none;
+    padding: 7px;
+    text-align: center;
+    text-transform: uppercase;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+}
+main .js-page a{
+    color: rgb(234, 230, 240);
+    text-decoration: none;
+}
+main .p-js-page{
+    width: 85%;
+    margin-left: 12.25%;
+    font-size: 1.3em;
+}
+main h3 {
+    font-size: 1.6em;
+    font-weight: 300;
+    color: rgb(234, 230, 240);
+    margin-bottom: 18px;
+    background-color: rgb(22, 51, 59);
+    padding: 7px;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 100%;
+}
+main article {
+    text-align: justify;
+    color: rgb(234, 230, 240);
+    padding-bottom: 12px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 5px dashed rgb(39, 39, 39);
+}
+main article p{
+    border: 0px solid;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+    width: 90%;
+    margin-left: 5%;
+}
+main figure {
+    margin-bottom: 12px;
+}
+main figcaption {
+    color: rgb(242, 242, 242);
+    background-color: rgb(80, 80, 80);
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+    padding: 7px;
+    margin-left: 6px;
+}
+
+/* Mise en place tableau*/
+table{
+    width: 80%;
+    margin-left: 10%;
+}
+table, td{
+    padding: 10px 30px 0;
+}
+td{
+    border: 1px solid rgb(85, 85, 85);
+}
+table thead{
+    background-color: rgb(0, 94, 122);
+    text-align: center;
+}
+
+/* GALLERY - Mise en place de la galerie d'images */
+@media screen and (min-width: 780px) {
+    #gallery figure {
+        width: 47.5%;
+    }
+    .flexing {
+        display: flex;
+    }
+    #gallery {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+/* FOOTER */
+footer {
+    background-color: rgb(0, 94, 122);
+    color: rgb(217,217,217);
+    padding: 24px 18px;
+    text-align: center;
+}
+footer h3{
+    font-size: 1.2em;
+    margin-bottom: 12px;
+    color: rgb(217,217,217);
+}
+/* FOOTER */
+
+
+/* START : MENU-DEROULANT ARTICLE */
+.input-invisible{
+    display: none;
+}
+.dropdown {
+    width: 100%;
+    max-width: 100%;
+}
+button.dropdown-bouton {
+	width: 100%;
+    background-color: rgb(80, 80, 80);
+	border: none;
+	outline: none;
+	text-align: left;
+	padding: 5px 5px;
+	font-size: 18px;
+	color: rgb(217,217,217);
+	cursor: pointer;
+	transition: background-color 0.2s linear;
+}
+button.dropdown-bouton:after {
+	content: "\2795";
+	font-size: 18px;
+	float: right;
+}
+button.dropdown-bouton.is-open:after {
+	content: "\2796";
+}
+button.dropdown-bouton:hover,
+button.dropdown-bouton.is-open {
+    background-color: rgb(0, 94, 122);
+    color: rgb(217,217,217);
+}
+.dropdown-contenu {
+	background-color: rgb(31, 31, 31);
+    border-left: 3px solid rgb(22, 51, 59);
+    border-right: 3px solid rgb(22, 51, 59);
+    border-bottom: 3px solid rgb(22, 51, 59);
+	padding: 0 20px;
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-in-out;
+    color: rgb(217,217,217);
+}
+.white{
+    color: rgb(217,217,217);
+}
+fieldset{
+    border: none;
+    height: 100%;
+    padding: 15px;
+    font-weight: 600;
+} 
+.scroller {
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+    scrollbar-color: rgb(0, 94, 122) rgb(172, 172, 172);
+    scrollbar-width: thin;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.grid-one {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+.grid-two {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+}
+/* STOP : MENU-DEROULANT ARTICLE */
+
+/* FIL D'ARIANE */
+.breadcrumb ul {
+    display: flex;
+    list-style: none;
+    color: white;
+    margin-bottom: 15px;
+}
+.breadcrumb a{
+    color: rgb(42, 136, 165);
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+.breadcrumb li::before {
+    content: "→";
+}  
+.breadcrumb li:first-child::before {
+    content: "";
+}
+.breadcrumb span{
+    font-weight: bold;
+}
+/* FIL D'ARIANE */
+
+
+
+/* 
+
+Taille du texte             =   font-size : 1.6em; 
+Couleur de fond             =   background-color : white;
+Aligner le texte au centre  =   text-align : center;
+
+*/
+
+
+
+
+
+  

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Fascinate&family=Oi&family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <title>Mon premier site web</title>
+    <meta name="description" content="Ceci est mon premier site créé lors de ma formation.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <!-- Balise vide, l'image sera ajoutée via le CSS -->
+        </div>
+        <nav class="navigation">
+            <ul class="nav-liste">
+                <li class="nav-categorie"><a href="index.html">Home</a></li>
+                <li class="nav-categorie"><a href="javascript.html">Javascript</a>
+                    <ul class="nav-sous-menu">
+                        <li><a href="exercices.html">Exercices</a></li>
+                        <li><a href="defis.html">Défis</a></li>
+                        <li><a href="bonus.html">Bonus</a></li>
+                    </ul>
+                </li>
+                <li class="nav-categorie"><a href="https://www.interface3namur.be" target="_blank">Interface3.Namur</a>
+                    <ul class="nav-sous-menu">
+                        <li><a href="https://www.interface3namur.be/asbl/" target="_blank">A propos</a></li>
+                        <li><a href="https://www.interface3namur.be/formation/" target="_blank">Formations</a></li>
+                        <li><a href="https://www.interface3namur.be/orientation/fiches-metiers/" target="_blank">Fiches métiers</a></li>
+                        <li><a href="https://www.interface3namur.be/contact/" target="_blank">Contact</a></li>
+                    </ul>
+                </li>
+            </ul> 
+        </nav>
+    </header>
+    
+    <main>
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="javascript.html">Javascript</a></li>
+                <li><span aria-current="page"><a href="exercices.html">Exercices</a></span></li>
+            </ul>
+        </nav>
+        <h1>JavaScript</h1>
+        <section>
+        <h2>EXERCICES</h2>
+            <article>
+            <h3>Exercice 01 : Formulaire + réponse personnalisée</h3>
+                <p>Ce script demande de remplir un formulaire. Celui-ci stockera les valeurs entrées afin de les afficher avec un message personnalisé.</p>
+                <div class="dropdown">
+                <button class="dropdown-bouton">Afficher le formulaire</button>
+                <div class="dropdown-contenu">
+                <div class="scroller">
+                    <form method="POST" autocomplete="off">
+                        <fieldset>
+                        <div class="grid">
+                            <div class="grid-one">
+                                <div>
+                                    <label for="nom">Nom :</label><br>
+                                    <input id="nom" type="text" placeholder="Vladskanatov">
+                                </div>
+                                <div>
+                                    <label for="prenom">Prénom :</label><br>
+                                    <input id="prenom" type="text" placeholder="Philomène">
+                                </div>
+                                <div>
+                                    <label for="adresse">Rue + n° :</label><br>
+                                    <input id="adresse" type="text" id="adresse" placeholder="Rue du paradis, 42">
+                                </div>
+                                <div>
+                                    <label for="code_postal_localite">Code postal + localité :</label><br>
+                                    <input id="code_postal_localite" type="text" placeholder="0001 PARADIS">
+                                </div>
+                                <div>
+                                    <label for="telephone">Téléphone :</label><br>
+                                    <input id="telephone" type="text" placeholder="+32123 45 67 89">
+                                </div>
+                                <div>
+                                    <label for="e_mail">E-mail :</label><br>
+                                    <input  id="e_mail" type="text id="e_mail" placeholder="email@mail.com">
+                                </div>
+                                <div>
+                                    <input type="button" value="Envoyer" onclick="returnFormExo1()">
+                                    <input type="reset" value="Reset" onclick="resetFormExo1()">
+                                </div>
+                            </div>
+                            <div class="grid-two">
+                                <p id="reponseFormExo1" class="white"></p>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </form>
+                </div>
+                </div>
+                </div>
+            </article>
+
+
+            <article>
+            <h3>Exercice 02 : Calcul de prix</h3> 
+                <p>Script qui calculera le prix total par rapport à un prix donné par l'utilisateur, le nombre d'article ainsi que son taux de TVA et affichera le résultat final. Prix * nombre d'article + TVA.</p>
+                <div class="dropdown">
+                    <button class="dropdown-bouton">Afficher le formulaire de calcul</button>
+                    <div class="dropdown-contenu">
+                        <div class="scroller">
+                        <form method="POST" autocomplete="off">
+                            <fieldset>
+                            <div class="grid">
+                                <div class="grid-one">
+                                    <div>
+                                        <label for="prixArticle">Prix de l'article :</label><br>
+                                        <input id="prixArticle" type="number" step="0.01" min="0" placeholder="par ex. 5.46">
+                                    </div>
+                                    <div>
+                                        <label for="quantiteArticle">Nombre d'articles :</label><br>
+                                        <input id="quantiteArticle" type="number" step="1" min="0" placeholder="par ex. 3">
+                                    </div>
+                                    <div>
+                                        <label for="tauxTVA">Taux de la TVA :</label><br>
+                                        <input id="tauxTVA" type="select" step="1" min="0" placeholder="entrer 0, 6, 12 ou 21">
+                                    </div>
+                                    <div>
+                                        <input type="button" value="Envoyer" onclick="returnFormExo2()">
+                                        <input type="reset" value="Reset" onclick="resetFormExo2()">
+                                    </div>
+                                </div>
+                                <div class="grid-two">
+                                    <p id="reponseFormExo2" class="white"></p>
+                                </div>
+                            </div>
+                            </fieldset>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+            <h3>Exercice 03 : Opérations de base. +, -, *, /</h3> 
+                <p>Script qui affichera le résultat d'une somme, d'une différence, d'un quotient et d'un produit par rapport à deux chiffres donnés par l'utilisateur.</p>
+                <div class="dropdown">
+                    <button class="dropdown-bouton">Afficher le formulaire d'opérations de base</button>
+                    <div class="dropdown-contenu">
+                        <div class="scroller">
+                        <form method="POST" autocomplete="off">
+                            <fieldset>
+                            <div class="grid">
+                                <div class="grid-one">
+                                    <div>
+                                        <label for="nbrUser01">Premier nombre entier :</label><br>
+                                        <input id="nbrUser01" type="number" step="1" min="0" placeholder="par ex. 3">
+                                    </div>
+                                    <div>
+                                        <label for="nbrUser02">Second nombre entier :</label><br>
+                                        <input id="nbrUser02" type="number" step="1" min="0" placeholder="par ex. 3">
+                                    </div>
+                                    <div>
+                                        <input type="button" value="Envoyer" onclick="returnFormExo3()">
+                                        <input type="reset" value="Reset" onclick="resetFormExo3()">
+                                    </div>
+                                </div>
+                                <div class="grid-two">
+                                    <p id="reponseFormExo3" class="white"></p>
+                                </div>
+                            </div>
+                            </fieldset>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+            <h3>Exercice 04 : Première condition. IF, ELSE IF, ELSE</h3>
+                <p>Script qui affichera un résultat par rapport à une condition de type "plus petit que", "plus grand que" ou "égale à" d'une valeur pré-enregistrée de 10.</p>
+                <div class="dropdown">
+                    <button class="dropdown-bouton">Afficher le formulaire de condition</button>
+                    <div class="dropdown-contenu">
+                        <div class="scroller">
+                        <form method="POST" autocomplete="off">
+                            <fieldset>
+                            <div class="grid">
+                                <div class="grid-one">
+                                    <div>
+                                        <label for="nbreUser">Entrer un nombre :</label><br>
+                                        <input id="nbreUser" type="select" step="1" min="0" placeholder="par ex. 3">
+                                        <input class="input-invisible"></input>
+                                    </div>
+                                    <div>
+                                        <input type="button" value="Envoyer" onclick="returnFormExo4()">
+                                        <input type="reset" value="Reset" onclick="resetFormExo4()">
+                                    </div>
+                                </div>
+                                <div class="grid-two">
+                                    <p id="reponseFormExo4" class="white"></p>
+                                </div>
+                            </div>
+                            </fieldset>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+            <h3>Exercice 05 : Bissextile ou non</h3> 
+                <p>Script qui affichera si une année entrée par l'utilisateur est bissextile ou non.</p>
+                <div class="dropdown">
+                    <button class="dropdown-bouton">Afficher le formulaire bissextile ou non</button>
+                    <div class="dropdown-contenu">
+                        <div class="scroller">
+                        <form method="POST" autocomplete="off">
+                            <fieldset>
+                            <div class="grid">
+                                <div class="grid-one">
+                                    <div>
+                                        <label for="anneeUser">Entrer une année :</label><br>
+                                        <input id="anneeUser" type="number" step="1" min="0" placeholder="par ex. 1865, 2020...">
+                                        <input class="input-invisible"></input>
+                                    </div>
+                                    <div>
+                                        <input type="button" value="Envoyer" onclick="returnFormExo5()">
+                                        <input type="reset" value="Reset" onclick="resetFormExo5()">
+                                    </div>
+                                </div>
+                                <div class="grid-two">
+                                    <p id="reponseFormExo5" class="white"></p>
+                                </div>
+                            </div>
+                            </fieldset>
+                        </form>
+                        </div>
+                    </div>
+                </div> 
+            </article>
+
+            <article>
+            <h3>Exercice 06 : Commentaire sur l'âge</h3> 
+                <p>Script qui demandera de rentrer l'année de naissance de l'utilisateur. Cela calculera son âge et affichera une alerte personnalisée.</p>
+                <div class="dropdown">
+                    <button class="dropdown-bouton">Afficher le formulaire commentaire de l'âge</button>
+                    <div class="dropdown-contenu">
+                        <div class="scroller">
+                        <form method="POST" autocomplete="off">
+                            <fieldset>
+                            <div class="grid">
+                                <div class="grid-one">
+                                    <div>
+                                        <label for="anneeNaissance">Votre année de naissance :</label><br>
+                                        <input id="anneeNaissance" type="number" placeholder="par ex. 1865, 2020...">
+                                        <input class="input-invisible"></input>
+                                    </div>
+                                    <div>
+                                        <input type="button" value="Envoyer" onclick="returnFormExo6()">
+                                        <input type="reset" value="Reset" onclick="resetFormExo6()">
+                                    </div>
+                                </div>
+                                <div class="grid-two">
+                                    <p id="reponseFormExo6" class="white"></p>
+                                </div>
+                            </div>
+                            </fieldset>
+                        </form>
+                        </div>
+                    </div>
+                </div> 
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Age</th>
+                            <th>Commentaire</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Moins ou égale à 0</td>
+                            <td>Vous êtes probablement en cours de conception.</td>
+                        </tr>
+                        <tr>
+                            <td>Moins de 18 ans</td>
+                            <td>Vous êtes mineur.</td>
+                        </tr>
+                        <tr>
+                            <td>De 18 à 49 ans</td>
+                            <td>Vous êtes majeur mais pas encore senior.</td>
+                        </tr>
+                        <tr>
+                            <td>50 à 64</td>
+                            <td>Vous êtes senior mais pas encore retraité.e.</td>
+                        </tr>
+                        <tr>
+                            <td>de 65 à 105 ans</td>
+                            <td>Vous êtes retraité.e, profitez du temps qu'il vous reste.</td>
+                        </tr>
+                        <tr>
+                            <td>Plus de 105 ans</td>
+                            <td>Vous êtes probablement décédé.e. Désolé de vous l'apprendre.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article>
+            <h3>Exercice 07 : Oui ou non ? (switch)</h3>
+                <p>Script qui demande à l'utilisateur d'entrer soit "oui" ou "non" et affichera un message personnalisé en fonction du mot entré.</p>
+                <div class="dropdown">
+                    <button class="dropdown-bouton">Afficher le formulaire "Oui ou non ?"</button>
+                    <div class="dropdown-contenu">
+                        <div class="scroller">
+                        <form method="POST" autocomplete="off">
+                            <fieldset>
+                            <div class="grid">
+                                <div class="grid-one">
+                                    <div>
+                                        <label for="choixUser">Entrer "oui" ou "non" :</label><br>
+                                        <input id="choixUser" type="text" placeholder="par ex. oui">
+                                        <input class="input-invisible"></input>
+                                    </div>
+                                    <div>
+                                        <input type="button" value="Envoyer" onclick="returnFormExo7()">
+                                        <input type="reset" value="Reset" onclick="resetFormExo7()">
+                                    </div>
+                                </div>
+                                <div class="grid-two">
+                                    <p id="reponseFormExo7" class="white"></p>
+                                </div>
+                            </div>
+                            </fieldset>
+                        </form>
+                        </div>
+                    </div>
+                </div>  
+            </article>
+
+            <article>
+            <h3>Exercice 08 : Les tiroirs</h3>
+                <p>Script qui demande à l'utilisateur d'entrer le numéro d'un tiroir, entre 1 et 8. Chaque tiroir afficheront un message personnalisé en fonction du chiffre entré.</p>
+                <div class="dropdown">
+                    <button class="dropdown-bouton">Afficher le formulaire des tiroirs</button>
+                    <div class="dropdown-contenu">
+                        <div class="scroller">
+                        <form method="POST" autocomplete="off">
+                            <fieldset>
+                            <div class="grid">
+                                <div class="grid-one">
+                                    <div>
+                                        <label for="choix">Entrer un chiffre entre 1 et 8 :</label><br>
+                                        <input id="choix" type="number" placeholder="par ex. 5">
+                                        <input class="input-invisible"></input>
+                                    </div>
+                                    <div>
+                                        <input type="button" value="Envoyer" onclick="returnFormExo8()">
+                                        <input type="reset" value="Reset" onclick="resetFormExo8()">
+                                    </div>
+                                </div>
+                                <div class="grid-two">
+                                    <p id="reponseFormExo8" class="white"></p>
+                                </div>
+                            </div>
+                            </fieldset>
+                        </form>
+                        </div>
+                    </div>
+                </div> 
+            </article>
+
+            <article>
+            <h3>Exercice 09 : La boucle while</h3> 
+                <p>Script qui affichera, en plusieurs popups, ce que contient la valeur "i" tant que celle-ci est inférieur à la valeur pré-enregistrée de 10.</p>
+                <button type="button" onclick="boucleWhile()">Lancer</button> 
+            </article>
+
+            <article>
+            <h3>Exercice 10 : La boucle do.. while</h3> 
+                <p>Script qui demandera en boucle d'entrer le chiffre 1 tant que celui-ci ne sera pas inséré par l'utilisateur.</p>
+                <button type="button" onclick="boucleDoWhile()">Lancer</button> 
+            </article>
+
+            <article>
+            <h3>Exercice 11 : La boucle for</h3> 
+                <p>Script qui demandera à l'utilisateur d'entrer un chiffre au hasard et affichera les 15 prochains chiffres en un seul message.</p>
+                <button type="button" onclick="loopFor()">Lancer</button> 
+            </article>
+
+            <article>
+            <h3>Exercice 12 : Changer la couleur de fond</h3> 
+                <p>Script qui permet à l'utilisateur de changer la couleur de fond du site web à sa guise.</p>
+                <p>Rouge</p>
+                <input type="range" id="sliderR" min="1" max="255" step="1" value="255" oninput="changeCouleur()">
+                <p>Vert</p>
+                <input type="range" id="sliderV" min="1" max="255" step="1" value="255" oninput="changeCouleur()">
+                <p>Bleu</p>
+                <input type="range" id="sliderB" min="1" max="255" step="1" value="255" oninput="changeCouleur()">
+            </article>
+
+            <article>
+            <h3>Exercice 13 : Test de mot de passe</h3>
+                <p>Script qui permet de vérifier la création d'un mot de passe en demandant obligatoirement un mot de passer assez long, avec au moins 1 majuscule, 1 chiffre et 1 caractère spécial.</p>
+                <form method="post" autocomplete="off">
+                    <div>
+                        <label for="mdp">Créez un mot de passe :</label><span id="autorisation"></span><br>
+                        <input type="password" id="mdp" oninput="verificationCaracteres()">
+                        <input class="input-invisible"></input>
+                    </div>
+                    <div>
+                        <input type="button" value="Envoyer" onclick="verificationMdp()">
+                        <input type="reset" value="Reset" onclick="resetFormMdp()">
+                    </div>
+                    <p id="retourLenght"></p>
+                    <p id="retourMaj"></p>
+                    <p id="retourChiffre"></p>
+                    <p id="retourSpecial"></p>
+
+                    <div id="retourValid2">                
+                    </div>
+                </form>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <h3>Informations</h3>
+        <p>Site web pour <strong>Découverte de la programmation</strong></p>
+        <p><strong>Déborah Clerckx</strong> &copy;2021</p>
+    </footer>
+    <script src="javascript/script.js"></script>
+
+</body>
+</html>

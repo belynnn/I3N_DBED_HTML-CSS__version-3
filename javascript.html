@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Fascinate&family=Oi&family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <title>Mon premier site web</title>
+    <meta name="description" content="Ceci est mon premier site créé lors de ma formation.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <!-- Balise vide, l'image sera ajoutée via le CSS -->
+        </div>
+        <nav class="navigation">
+            <ul class="nav-liste">
+                <li class="nav-categorie"><a href="index.html">Home</a></li>
+                <li class="nav-categorie"><a href="javascript.html">Javascript</a>
+                    <ul class="nav-sous-menu">
+                        <li><a href="exercices.html">Exercices</a></li>
+                        <li><a href="defis.html">Défis</a></li>
+                        <li><a href="bonus.html">Bonus</a></li>
+                    </ul>
+                </li>
+                <li class="nav-categorie"><a href="https://www.interface3namur.be" target="_blank">Interface3.Namur</a>
+                    <ul class="nav-sous-menu">
+                        <li><a href="https://www.interface3namur.be/asbl/" target="_blank">A propos</a></li>
+                        <li><a href="https://www.interface3namur.be/formation/" target="_blank">Formations</a></li>
+                        <li><a href="https://www.interface3namur.be/orientation/fiches-metiers/" target="_blank">Fiches métiers</a></li>
+                        <li><a href="https://www.interface3namur.be/contact/" target="_blank">Contact</a></li>
+                    </ul>
+                </li>
+            </ul> 
+        </nav>
+    </header>
+
+    <main>
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><span aria-current="page"><a href="javascript.html">Javascript</a></span></li>
+            </ul>
+        </nav>
+        <h1>JavaScript</h1>
+        <section>
+            <article>
+                <p class="p-js-page">Cliquer sur l'une des pages suivantes pour accèder au contenu de celles-ci.</p>
+                    <h2 class="js-page"><a href="exercices.html">Exercices</a></h2>
+                    <h2 class="js-page"><a href="defis.html">Défis</a></h2>
+                    <h2 class="js-page"><a href="bonus.html">Bonus</a></h2>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Informations</h3>
+        <p>Site web pour <strong>Découverte de la programmation</strong></p>
+        <p><strong>Déborah Clerckx</strong> &copy;2021</p>
+    </footer>
+    <script src="javascript/script.js"></script>
+
+</body>
+</html>

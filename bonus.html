@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Fascinate&family=Oi&family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <title>Mon premier site web</title>
+    <meta name="description" content="Ceci est mon premier site créé lors de ma formation.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <!-- Balise vide, l'image sera ajoutée via le CSS -->
+        </div>
+        <nav class="navigation">
+            <ul class="nav-liste">
+                <li class="nav-categorie"><a href="index.html">Home</a></li>
+                <li class="nav-categorie"><a href="javascript.html">Javascript</a>
+                    <ul class="nav-sous-menu">
+                        <li><a href="exercices.html">Exercices</a></li>
+                        <li><a href="defis.html">Défis</a></li>
+                        <li><a href="bonus.html">Bonus</a></li>
+                    </ul>
+                </li>
+                <li class="nav-categorie"><a href="https://www.interface3namur.be" target="_blank">Interface3.Namur</a>
+                    <ul class="nav-sous-menu">
+                        <li><a href="https://www.interface3namur.be/asbl/" target="_blank">A propos</a></li>
+                        <li><a href="https://www.interface3namur.be/formation/" target="_blank">Formations</a></li>
+                        <li><a href="https://www.interface3namur.be/orientation/fiches-metiers/" target="_blank">Fiches métiers</a></li>
+                        <li><a href="https://www.interface3namur.be/contact/" target="_blank">Contact</a></li>
+                    </ul>
+                </li>
+            </ul> 
+        </nav>
+    </header>
+
+    <main>
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="javascript.html">Javascript</a></li>
+                <li><span aria-current="page"><a href="bonus.html">Bonus</a></span></li>
+            </ul>
+        </nav>
+        <h1>JavaScript</h1>
+    <section>
+    <h2>BONUS</h2>
+    <article>
+        <h3>Bonus : Stock</h3>
+            <p>Script qui affichera le prix au kg d'un article spécifique. Si l'un des articles entré par l'utilisateur n'est pas inscrit dans les valeurs enregistrés, un message signalera que celui-ci n'est plus en stock.</p>
+            <div class="dropdown">
+                <button class="dropdown-bouton">Afficher le formulaire de stock</button>
+                <div class="dropdown-contenu">
+                    <div class="scroller">
+                    <form method="POST" autocomplete="off">
+                        <fieldset>
+                        <div class="grid">
+                            <div class="grid-one">
+                                <div>
+                                    <label for="bonus">Entrer un article indiqué ci-dessous :</label><br>
+                                    <input id="bonus" type="string" placeholder="par ex. banane">
+                                </div>
+                                <div>
+                                    <input type="button" value="Envoyer" onclick="returnFormExo8b()">
+                                    <input type="reset" value="Reset" onclick="resetFormExo8b()">
+                                </div>
+                            </div>
+                            <div class="grid-two">
+                                <p id="reponseFormExo8b" class="white"></p>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </form>
+                    </div>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Articles</th>
+                        <th>Prix au kg/l ou à l'unité</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Banane</td>
+                        <td>0,49 € le kg</td>
+                    </tr>
+                    <tr>
+                        <td>Orange</td>
+                        <td>0,49 € le kg</td>
+                    </tr>
+                    <tr>
+                        <td>Farine</td>
+                        <td>1,00 € le kg</td>
+                    </tr>
+                    <tr>
+                        <td>Bouteille d'eau</td>
+                        <td>0,29 € le litre</td>
+                    </tr>
+                    <tr>
+                        <td>Papier toilette</td>
+                        <td>0,15 € l'unité</td>
+                    </tr>
+                    <tr>
+                        <td>Barre chocolatée</td>
+                        <td>0,10 € l'unité</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <article>
+              
+        </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <h3>Informations</h3>
+        <p>Site web pour <strong>Découverte de la programmation</strong></p>
+        <p><strong>Déborah Clerckx</strong> &copy;2021</p>
+    </footer>
+    <script src="javascript/script.js"></script>
+
+</body>
+</html>
